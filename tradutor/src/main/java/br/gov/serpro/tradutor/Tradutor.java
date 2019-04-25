@@ -1,18 +1,21 @@
 package br.gov.serpro.tradutor;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Tradutor {
-	private String traducao;
+	private Map<String, String> traducao = new HashMap<>();
 	
 	public boolean estaVazio() {
-		return (traducao==null);
+		return traducao.isEmpty();
 	}
 
 	public void adicionaTraducao(String palavra, String traducao) {
-		this.traducao = traducao;
+		this.traducao.put(palavra, traducao);
 	}
 
-	public Object traduzir(String palavra) {
-		return traducao;
+	public String traduzir(String palavra) {
+		return traducao.get(palavra);
 	}
 
 }
