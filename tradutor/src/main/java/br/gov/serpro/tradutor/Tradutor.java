@@ -27,12 +27,17 @@ public class Tradutor {
 		
 		for(String palavra : palavras) {
 			String traducao = traduzir(palavra);
-			if(traducao.contains(",")) {
-				traducao = traducao.substring(0, traducao.indexOf(","));
-			}
+			traducao = primeiraTraducao(traducao);
 			fraseTraduzida += " " + traducao;
 		}
 		return fraseTraduzida.trim();
+	}
+
+	private String primeiraTraducao(String traducao) {
+		if(traducao.contains(",")) {
+			traducao = traducao.substring(0, traducao.indexOf(","));
+		}
+		return traducao;
 	}
 
 }
