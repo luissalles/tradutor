@@ -1,17 +1,18 @@
 package br.gov.serpro.tradutor;
 
 public class Tradutor {
-
+	private String traducao;
+	
 	public boolean estaVazio() {
-		return true;
+		return (traducao==null);
 	}
 
-	public void adicionaPalavra(String string, String string2) {
-		
+	public void adicionaPalavra(String palavra, String traducao) {
+		this.traducao = traducao;
 	}
 
-	public Object traduzir(String string) {
-		return null;
+	public Object traduzir(String palavra) {
+		return traducao;
 	}
 
 }
