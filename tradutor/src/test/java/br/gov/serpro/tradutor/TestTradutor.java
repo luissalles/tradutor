@@ -4,18 +4,24 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class TestTradutor {
+	private Tradutor t;
+	
+	@Before
+	public void criarTradutor() {
+    	t = new Tradutor();
+	}
+	
     @Test
     public void tradutorSemPalavras(){
-    	Tradutor t = new Tradutor();
         assertTrue(t.estaVazio());
     }
     
     @Test
     public void umaTraducao() {
-    	Tradutor t = new Tradutor();
     	t.adicionaTraducao("bom", "good");
     	assertFalse(t.estaVazio());
     	assertEquals("good", t.traduzir("bom"));
@@ -23,7 +29,6 @@ public class TestTradutor {
 
     @Test
     public void duasTraducoes() {
-    	Tradutor t = new Tradutor();
     	t.adicionaTraducao("bom", "good");
     	t.adicionaTraducao("mau", "bad");
     	assertEquals("good", t.traduzir("bom"));
