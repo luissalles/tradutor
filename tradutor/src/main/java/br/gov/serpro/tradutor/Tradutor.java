@@ -21,8 +21,15 @@ public class Tradutor {
 		return traducoes.get(palavra);
 	}
 
-	public Object traduzirFrase(String string) {
-		return null;
+	public String traduzirFrase(String frase) {
+		String[] palavras = frase.split(" ");
+		String fraseTraduzida = null;
+		
+		for(String palavra : palavras) {
+			String traducao = traduzir(palavra);
+			fraseTraduzida += " " + traducao;
+		}
+		return fraseTraduzida.trim();
 	}
 
 }
