@@ -41,4 +41,12 @@ public class TestTradutor {
     	t.adicionaTraducao("bom", "nice");
     	assertEquals("good, nice", t.traduzir("bom"));
     }
+
+    @Test
+    public void traduzirFrase() {
+    	t.adicionaTraducao("guerra", "war");
+    	t.adicionaTraducao("é", "is");
+    	t.adicionaTraducao("ruim", "bad");
+    	assertEquals("war is bad", t.traduzirFrase("guerra é ruim"));
+    }
 }

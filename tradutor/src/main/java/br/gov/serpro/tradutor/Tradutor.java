@@ -21,4 +21,8 @@ public class Tradutor {
 		return traducoes.get(palavra);
 	}
 
+	public Object traduzirFrase(String string) {
+		return null;
+	}
+
 }
