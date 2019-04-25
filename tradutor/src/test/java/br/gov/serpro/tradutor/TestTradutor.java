@@ -16,7 +16,7 @@ public class TestTradutor {
     @Test
     public void umaTraducao() {
     	Tradutor t = new Tradutor();
-    	t.adicionaPalavra("bom", "good");
+    	t.adicionaTraducao("bom", "good");
     	assertFalse(t.estaVazio());
     	assertEquals("good", t.traduzir("bom"));
     }
