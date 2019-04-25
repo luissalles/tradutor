@@ -6,4 +6,12 @@ public class Tradutor {
 		return true;
 	}
 
+	public void adicionaPalavra(String string, String string2) {
+		
+	}
+
+	public Object traduzir(String string) {
+		return null;
+	}
+
 }
