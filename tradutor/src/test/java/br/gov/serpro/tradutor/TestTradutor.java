@@ -20,4 +20,13 @@ public class TestTradutor {
     	assertFalse(t.estaVazio());
     	assertEquals("good", t.traduzir("bom"));
     }
+
+    @Test
+    public void duasTraducoes() {
+    	Tradutor t = new Tradutor();
+    	t.adicionaTraducao("bom", "good");
+    	t.adicionaTraducao("mau", "bad");
+    	assertEquals("good", t.traduzir("bom"));
+    	assertEquals("bad", t.traduzir("mau"));
+    }
 }
